@@ -19,3 +19,20 @@ body {
 #weather {
     margin-top: 20px;
 }
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info h2 {
+    margin: 0;
+}
+
+.weather-info p {
+    margin: 5px 0;
+}
