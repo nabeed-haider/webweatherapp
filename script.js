@@ -1,4 +1,5 @@
 const apiKey = '1a09467ab8e5e256dfbaae8fe41ca4af';
+
 function fetchWeather(lat, lon) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}&lang=en`;
     fetch(url)
@@ -10,16 +11,16 @@ function fetchWeather(lat, lon) {
             const city = data.name;
             const humidity = data.main.humidity;
             const windSpeed = data.wind.speed;
-            const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+            const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
             
             weatherElement.innerHTML = `
                 <h2>${city}</h2>
                 <img src="${icon}" alt="Weather Icon" class="weather-icon">
                 <div class="weather-info">
-                    <p>Temperature: ${temp}°C</p>
-                    <p>Condition: ${description}</p>
-                    <p>Humidity: ${humidity}%</p>
-                    <p>Wind Speed: ${windSpeed} m/s</p>
+                    <p><strong>Temperature:</strong> ${temp}°C</p>
+                    <p><strong>Condition:</strong> ${description}</p>
+                    <p><strong>Humidity:</strong> ${humidity}%</p>
+                    <p><strong>Wind Speed:</strong> ${windSpeed} m/s</p>
                 </div>
             `;
         })
@@ -44,4 +45,3 @@ function getLocation() {
 }
 
 document.addEventListener('DOMContentLoaded', getLocation);
-
