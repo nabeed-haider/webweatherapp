@@ -3,6 +3,7 @@ const apiKey = '1a09467ab8e5e256dfbaae8fe41ca4af';
 
 
 
+
 function getWeather() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
