@@ -8,6 +8,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
 }
 
 .container {
@@ -93,3 +94,7 @@ h1 {
     100% { transform: translateY(0); }
 }
 
+@keyframes backgroundAnimation {
+    0% { background-color: #e0f7fa; }
+    100% { background-color: #b2ebf2; }
+}
